@@ -31,20 +31,33 @@ public class ScannerKeyBoardTest {
             System.out.print("键盘输入的内容是:" + sc3.nextLong());
         }
         /////////////////////////////////////
-        try{
-            Scanner sc4=new Scanner(new File(".\\main\\java\\com\\ccjjltx\\scanner\\ScannerKeyBoardTest.java"));
+        try {
+            Scanner sc4 = new Scanner(new File(".\\main\\java\\com\\ccjjltx\\scanner\\ScannerKeyBoardTest.java"));
             System.out.println("ScannerKeyBoardTest.java文件内容如下:");
-            while(sc.hasNextLine()){
+            while (sc.hasNextLine()) {
                 System.out.println(sc4.nextLine());
             }
-        }catch(FileNotFoundException f){
+        } catch (FileNotFoundException f) {
             System.out.println("文件没有发现");
         }
         ////////////////////////////////////
-        Scanner sc5=new Scanner("12 23 as as,qw qw,qw");
+        Scanner sc5 = new Scanner("12 23 as as,qw qw,qw");
         sc5.useDelimiter("|,|\\.");
-        while(sc5.hasNext()){
-            System.out.println("内容为:"+sc5.next());
+        while (sc5.hasNext()) {
+            System.out.println("内容为:" + sc5.next());
         }
+        /*
+        next()和nextLine()
+        next():
+        1.一定要读取到有效字符后才能结束输入
+        2.对输入有效字符之前遇到的空白，next（）方法会自动将其去掉
+        3.只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符
+        next()不能得到带有空格的字符串
+
+        nextLine():
+        1.以Enter为结束符，也就是说nextLine()方法返回的是输入回车之前的所有字符
+        2.可以获得空白
+
+         */
     }
 }
