@@ -28,11 +28,11 @@ public class ScannerKeyBoardTest {
         Scanner sc3 = new Scanner(System.in);
         System.out.println("以nextLong方法接收:");
         if (sc3.hasNextLong()) {
-            System.out.print("键盘输入的内容是:" + sc3.nextLong());
+            System.out.println("键盘输入的内容是:" + sc3.nextLong());
         }
         /////////////////////////////////////
         try {
-            Scanner sc4 = new Scanner(new File(".\\main\\java\\com\\ccjjltx\\scanner\\ScannerKeyBoardTest.java"));
+            Scanner sc4 = new Scanner(new File("src\\main\\java\\com\\ccjjltx\\App.java"));
             System.out.println("ScannerKeyBoardTest.java文件内容如下:");
             while (sc.hasNextLine()) {
                 System.out.println(sc4.nextLine());
