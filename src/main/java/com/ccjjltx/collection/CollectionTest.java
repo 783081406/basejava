@@ -74,11 +74,11 @@ public class CollectionTest {
         void forEachRemaining(Consumer action):这是java8为Iterator新增加的默认方法，该方法可以使用Lambda表达式遍历集合元素
         但使用迭代时，Collection集合元素不能修改，只能通过Iterator的remove()才行，不然会java.util.ConcurrentModificationException
          */
-        Iterator<String> it=books.iterator();
-        while(it.hasNext()){
-            String book=it.next();
+        Iterator<String> it = books.iterator();
+        while (it.hasNext()) {
+            String book = it.next();
             System.out.println(book);
-            if(book.equals("书3")){
+            if (book.equals("书3")) {
                 //从集合中删除上一次next()方法返回的元素
                 it.remove();
             }
@@ -92,17 +92,17 @@ public class CollectionTest {
         /*
         java8为Iterator新增一个forEachRemaining(Consumer action)方法
          */
-        it.forEachRemaining(obj->System.out.println("迭代元素:"+obj));
+        it.forEachRemaining(obj -> System.out.println("迭代元素:" + obj));
         //===================使用foreach遍历===================
-        for(String string:books){
+        for (String string : books) {
             //此处的book变量不是集合元素本身
-            String book=string;
+            String book = string;
             System.out.println(book);
-            if(book.equals(("书2"))){
+            if (book.equals(("书2"))) {
                 //下面代码回引发ConcurrentModificationException异常
-                try{
+                try {
                     books.remove(book);
-                }catch (ConcurrentModificationException e){
+                } catch (ConcurrentModificationException e) {
                     System.out.println("修改异常");
                 }
             }
