@@ -1,6 +1,8 @@
 /**
  * Created by ccjjltx on 2017/2/27.
  * Collection接口List、Set和Queue接口的父接口
+ * 只需要记住一点，集合类就像容器，现实生活中的容器的功能，无非就是添加对象，删除对象，清空对象，判断对象是否为空等，
+ * 集合类就是为这类功能提供了对应的方法
  * boolean add(Object o):该方法用于向集合里面添加一个元素。如果集合对象被添加操作改变了，这返回true
  * boolean addAll(Collection c):该方法把集合c里的所有元素添加到指定集合厘米里，如果集合对象被操作改变了，则返回true
  * void clear():清除集合里的所有元素，将集合长度变成0
