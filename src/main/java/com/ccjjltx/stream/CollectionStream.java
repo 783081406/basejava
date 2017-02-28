@@ -22,6 +22,7 @@ public class CollectionStream {
         System.out.println(books.stream().filter(ele->ele.contains("89")).count());
         //统计书名里面字符串长度大于10的图书数量
         System.out.println(books.stream().filter(ele->ele.length()>10).count());
-        books.stream().mapToInt(ele->ele.length()).forEach(System.out::println);
+        books.stream().mapToInt(ele->ele.length()).forEach(System.out
+                ::println);
     }
 }
