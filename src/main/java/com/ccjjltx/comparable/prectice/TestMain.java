@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 /**
  * Created by ccjjltx on 2017/3/1.
- *
  * @author ccj
  * @version 1.0
  */
@@ -20,10 +19,10 @@ public class TestMain {
         for (Student student : students) {
             System.out.println(student);
         }
+        System.out.println("=========================================");
         //排序
         Arrays.sort(students, Comparators.getComparator());
         System.out.println("排序后:");
-        System.out.println("排序前:");
         for (Student student : students) {
             System.out.println(student);
         }
