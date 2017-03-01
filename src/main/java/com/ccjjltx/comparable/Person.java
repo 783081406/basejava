@@ -56,4 +56,15 @@ public class Person implements Comparable<Person> {
     public int compareTo(Person o) {
         return name.compareTo(o.name);
     }
+
+    /**
+     * 重写toString方法
+     *
+     * @return 字符串
+     */
+    @Override
+    public String toString() {
+        return name + "_" + age;
+    }
+
 }
