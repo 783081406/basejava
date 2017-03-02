@@ -6,7 +6,7 @@
  * Object first():返回集合中的第一个元素
  * Object last():返回集合中的最后一个元素
  * Object lower(Object e):返回集合中位于指定元素之前的元素（即小于指定元素的最大元素，参考元素不需要是TreeSet集合里面的元素)
- * Object hight(Object e):返回集合中位于指定元素之后的元素（即大于制定元素的最小元素，参考元素不需要是TreeSet集合里面的元素)
+ * Object higher(Object e):返回集合中位于指定元素之后的元素（即大于制定元素的最小元素，参考元素不需要是TreeSet集合里面的元素)
  * SortedSet subSet(Object fromElement,Object toElement):返回此Set的子集合，范围从fromElement(包含)到toElement(不包含)
  * SortedSet headSet(Object toElement):返回此Set的子集，由小于toElement的元素组成
  * SortedSet tailSet(Object fromElement):返回此Set的子集，由大于或等于fromElement的元素组成
