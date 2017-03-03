@@ -17,6 +17,10 @@ public class DataTypeTest {
         testInfinity();
         //基本类型和String
         primitiveAndString();
+        //强制转换
+        narrowConversion();
+        //运算
+        autoPromote();
     }
 
     /**
@@ -108,4 +112,32 @@ public class DataTypeTest {
         System.out.println("Hello" + 3 + 4);//Hello34
     }
 
+    /**
+     * 强制转换
+     */
+    private static void narrowConversion(){
+        System.out.println("====================================");
+        int iValue=233;
+        //强制把一个int类型的值转换为byte类型的值
+        byte bValue=(byte)iValue;
+        //将输出-23
+        //将int的补码取后八位，转反码，最后得到原码
+        System.out.println(bValue);
+    }
+
+    /**
+     * 运算
+     */
+    private static void autoPromote(){
+        System.out.println("===================================");
+        String s="45";
+        int iValue=Integer.parseInt(s);
+        System.out.println(iValue);
+        int a=23/3;
+        System.out.println(a);//7
+        double b=23/3;
+        System.out.println(b);//7.0
+        double c=23.0/3.0;
+        System.out.println(c);//7.666666666666667
+    }
 }
