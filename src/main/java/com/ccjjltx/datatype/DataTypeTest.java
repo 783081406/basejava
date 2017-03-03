@@ -21,6 +21,8 @@ public class DataTypeTest {
         narrowConversion();
         //运算
         autoPromote();
+        //求余
+        testMod();
     }
 
     /**
@@ -86,10 +88,10 @@ public class DataTypeTest {
         float d = Float.NEGATIVE_INFINITY;
         //float和double的无穷大相同
         System.out.println("无穷大比较" + (c == d));
-        System.out.println(-8 / a);
+        System.out.println(-8 / a);//-Infinity
         System.out.println(6.0 / 0 == 555.0 / 0);
         //0.0除以0.0出现非数
-        System.out.println("0.0除以0.0出现非数:" + a / a);
+        System.out.println("0.0除以0.0出现非数:" + a / a);//NaN
         //两个非数不相等
         System.out.println("两个非数不相等:" + (a / a == Float.NaN));
         //下面代码抛出异常
@@ -140,4 +142,24 @@ public class DataTypeTest {
         double c=23.0/3.0;
         System.out.println(c);//7.666666666666667
     }
+
+    /**
+     * 如果求余运算的两个操作数中有一个或者两个都是浮点数，这允许第二个操作数是0或者0.0，
+     * 只是求余运算的结果是非数：NaN。0或0.0对零以外的任何数求余都将得到0或0.0
+     */
+    private static void testMod(){
+        System.out.println("================================");
+        double a=5.2;
+        double b=3.1;
+        double mod=a%b;
+        System.out.println(mod);//2.1
+        System.out.println("5.0%0:"+5.0%0);//NaN
+        System.out.println("5%0.0:"+5%0.0);//NaN
+        System.out.println("-5%0.0:"+(-5%0.0));//NaN
+        System.out.println("0%5.0:"+0%5.0);//0.0
+        System.out.println("0%0.0:"+0%0.0);//NaN
+        //下面代码回抛出java.lang.ArithmeticException;
+        //System.out.println(-5%0);
+    }
+
 }
