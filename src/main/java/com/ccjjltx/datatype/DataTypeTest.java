@@ -13,6 +13,10 @@ public class DataTypeTest {
         binary();
         //字符串
         testchar();
+        //正负无穷数，非数
+        testInfinity();
+        //基本类型和String
+        primitiveAndString();
     }
 
     /**
@@ -47,6 +51,7 @@ public class DataTypeTest {
      * 字符串
      */
     private static void testchar() {
+        System.out.println("==========================");
         //直接指定单个字符作为字符值
         char aChar = 'a';
         //使用转移字符作为字符值
@@ -63,4 +68,44 @@ public class DataTypeTest {
         char c = 97;
         System.out.println(c);//a
     }
+
+    /**
+     * 正负无穷数，非数
+     */
+    private static void testInfinity() {
+        System.out.println("==========================");
+        float af = 5.23456789f;
+        //af值已经发生了变化
+        System.out.println(af);
+        double a = 0.0;
+        double c = Double.NEGATIVE_INFINITY;
+        float d = Float.NEGATIVE_INFINITY;
+        //float和double的无穷大相同
+        System.out.println("无穷大比较" + (c == d));
+        System.out.println(-8 / a);
+        System.out.println(6.0 / 0 == 555.0 / 0);
+        //0.0除以0.0出现非数
+        System.out.println("0.0除以0.0出现非数:" + a / a);
+        //两个非数不相等
+        System.out.println("两个非数不相等:" + (a / a == Float.NaN));
+        //下面代码抛出异常
+        //System.out.println(0/0);
+    }
+
+    /**
+     * 基本类型和String
+     * 当把任何基本类型的字和字符串值进行连接运算时，基本类型的值将自动类型转换为字符串类型，虽然字符串类型不是基本类型，
+     * 而是引用类型。因此，如果希望把基本类型的值转换成对应的字符串时，可以把基本类型的字和一个空字符串进行连接
+     */
+    private static void primitiveAndString() {
+        System.out.println("===========================================");
+        //下面代码错误,不能直接赋值给一个字符串
+        //String str1=5;
+        //一个基本类型的值和字符串进行连接运算时，基本类型的值自动转换为字符串
+        String str2 = 3.5 + "";
+        System.out.println(3.5);
+        System.out.println(3 + 4 + "Hello!");//7Hello!
+        System.out.println("Hello" + 3 + 4);//Hello34
+    }
+
 }
