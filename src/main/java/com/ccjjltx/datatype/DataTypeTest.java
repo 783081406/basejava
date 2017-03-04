@@ -23,6 +23,10 @@ public class DataTypeTest {
         autoPromote();
         //求余
         testMod();
+        //位操作
+        testBitOperator();
+        //逻辑运算符
+        testLogicOperator();
     }
 
     /**
@@ -117,11 +121,11 @@ public class DataTypeTest {
     /**
      * 强制转换
      */
-    private static void narrowConversion(){
+    private static void narrowConversion() {
         System.out.println("====================================");
-        int iValue=233;
+        int iValue = 233;
         //强制把一个int类型的值转换为byte类型的值
-        byte bValue=(byte)iValue;
+        byte bValue = (byte) iValue;
         //将输出-23
         //将int的补码取后八位，转反码，最后得到原码
         System.out.println(bValue);
@@ -130,16 +134,16 @@ public class DataTypeTest {
     /**
      * 运算
      */
-    private static void autoPromote(){
+    private static void autoPromote() {
         System.out.println("===================================");
-        String s="45";
-        int iValue=Integer.parseInt(s);
+        String s = "45";
+        int iValue = Integer.parseInt(s);
         System.out.println(iValue);
-        int a=23/3;
+        int a = 23 / 3;
         System.out.println(a);//7
-        double b=23/3;
+        double b = 23 / 3;
         System.out.println(b);//7.0
-        double c=23.0/3.0;
+        double c = 23.0 / 3.0;
         System.out.println(c);//7.666666666666667
     }
 
@@ -147,19 +151,53 @@ public class DataTypeTest {
      * 如果求余运算的两个操作数中有一个或者两个都是浮点数，这允许第二个操作数是0或者0.0，
      * 只是求余运算的结果是非数：NaN。0或0.0对零以外的任何数求余都将得到0或0.0
      */
-    private static void testMod(){
+    private static void testMod() {
         System.out.println("================================");
-        double a=5.2;
-        double b=3.1;
-        double mod=a%b;
+        double a = 5.2;
+        double b = 3.1;
+        double mod = a % b;
         System.out.println(mod);//2.1
-        System.out.println("5.0%0:"+5.0%0);//NaN
-        System.out.println("5%0.0:"+5%0.0);//NaN
-        System.out.println("-5%0.0:"+(-5%0.0));//NaN
-        System.out.println("0%5.0:"+0%5.0);//0.0
-        System.out.println("0%0.0:"+0%0.0);//NaN
+        System.out.println("5.0%0:" + 5.0 % 0);//NaN
+        System.out.println("5%0.0:" + 5 % 0.0);//NaN
+        System.out.println("-5%0.0:" + (-5 % 0.0));//NaN
+        System.out.println("0%5.0:" + 0 % 5.0);//0.0
+        System.out.println("0%0.0:" + 0 % 0.0);//NaN
         //下面代码回抛出java.lang.ArithmeticException;
         //System.out.println(-5%0);
     }
 
+    /**
+     * 位操作
+     */
+    private static void testBitOperator() {
+        System.out.println("=======================================");
+        System.out.println("5&9:" + (5 & 9));//1
+        System.out.println("5|9:" + (5 | 9));//13
+        System.out.println("~-5:" + ~-5);//4
+        System.out.println("5 ^ 9:" + (5 ^ 9));//12
+        System.out.println("5<<2:" + (5 << 2));//20
+        System.out.println("-5<<2:" + (-5 << 2));//-20
+        System.out.println("-5>>2:" + (-5 >> 2));//-2
+        System.out.println("-5>>>2:" + (-5 >>> 2));//1073741822
+    }
+
+    /**
+     * 逻辑运算符
+     */
+    private static void testLogicOperator(){
+        System.out.println("==========================================");
+        System.out.println(5>3&&'6'>10);//返回true
+        int a=5;
+        int b=10;
+        int c=5;
+        int d=10;
+        if(a>4|b++>10){
+            //输出a的值是5，b的值是11
+            System.out.println("a的值是:"+a+",b的值是:"+b);
+        }
+        if(c>4||d++>10){
+            //输出c的值是5，d的值是10
+            System.out.println("c的值是:"+c+",d的值是:"+d);
+        }
+    }
 }
