@@ -14,6 +14,23 @@
  * void sort(type[] a):该方法对a数组的元素进行排序
  * void sort(type[] a,int fromIndex,int toIndex):该方法与前一个方法相似，区别是该方法仅仅对fromIndex到toIndex索引的元素进行排序
  * String toString(type[] a):该方法将一个数组转换成一个字符串。该方法按顺序
+ * void parallelPrefix(xxx[] array,XxxBinaryOperator op):该方法使用op参数指定的计算公式计算得到的结果作为新的元素。op计算公式包括
+ * 当计算left、right两个形参，其中left代表数组中前一个索引处的元素，right代表数组中当前索引处的元素，当第一个新数组元素时，
+ * left的值默认为1
+ * void parallelPrefix(xxx[] array,int fromIndex,int toIndex,XxxBinaryOperator op):该方法与上一个方法相似，区别是该方法仅重新
+ * 计算fromIndex到toIndex索引的元素
+ * void setAll(xxx[] array,IntToXxxFunction generator):该方法使用指定的生成器（generator）为所有数组元素设置值，
+ * 该生成器控制数组元素的值的生成算法
+ * void parallelSetAll(xxx[] array,IntToXxxFunction generator):该方法的功能和上一个相同，只是该方法增加了并行能力，
+ * 可以利用多CPU并行来提供性能
+ * void parallelSort(xxx[] a):该方法的功能与Arrays类以前就有的sort()方法相似，区别是该方法仅对fromIndex到toIndex索引的元素进行排序
+ * Spliterator.OfXxx spliterator(xxx[] array):将该数组的所有元素转换成对应的Spliterator对象
+ * Spliterator.OfXxx spliterator(xxx[] array,int startInclusive,int endExclusive):该方法与上一个方法显示，区别是该方法仅转换
+ * startInclusive到endExclusive索引的元素
+ * XxxStream stream(xxx[] array):该方法将数组转换成Stream
+ * XxxStream stream(xxx[] array,int startInclusive,int endExclusive):该方法与上一个相似，区别是该方法仅将formIndex到toIndex索引的
+ * 元素转换成Stream
+ *
  * @author ccj
  * @version 1.0
  */
