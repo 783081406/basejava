@@ -80,9 +80,10 @@ public class ListTest {
         System.out.println(books);
         //使用目标类型为Comparator的Lambda表达式来替换集合中所有元素
         books.sort((o1,o2)->o1.length()-o2.length());
-        System.out.println(books);
+        System.out.println(books);//[book4234, book323, book54344, book1, book2]
         //控制使用每个字符串的长度作为新的集合元素
         books.replaceAll(ele->String.valueOf(ele.length()));
+        System.out.println(books);//[5, 5, 7, 8, 9]
     }
 }
 
