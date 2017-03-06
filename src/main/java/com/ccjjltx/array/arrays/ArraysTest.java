@@ -1,6 +1,7 @@
 package com.ccjjltx.array.arrays;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.IntBinaryOperator;
 import java.util.function.IntUnaryOperator;
 
@@ -16,6 +17,21 @@ public class ArraysTest {
         oldmethod();
         //新增用cpu并行能力来提高性能
         newmethos();
+        //asList(Object... a)
+        testAsList();
+    }
+
+    /**
+     * asList(Object... a)方法，返回一个Arrays的内部类Arrays.ArrayList，固定长度的List集合，程序
+     * 只能遍历访问该集合里面的元素，不可增加、删除该集合里面的元素
+     */
+    private static void testAsList(){
+        System.out.println("==========================================");
+        List fixedList=Arrays.asList("book1","book2","book3");
+        System.out.println(fixedList.getClass());//class java.util.Arrays$ArrayList
+        //使用方法引用遍历集合元素
+        fixedList.forEach(System.out::println);
+        //如果试图增加，删除元素都会引发UnsupportedOperationException异常
     }
 
     /**
