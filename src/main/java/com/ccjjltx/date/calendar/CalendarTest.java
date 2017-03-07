@@ -66,7 +66,7 @@ public class CalendarTest {
      * 知道下次调用get(),getTime(),getTimeInMillis(),add()或roll()时才能重新计算日历的时间
      * 采用延迟修改的优势是多次调用set()不会触发多次不必要的计算
      */
-    public static void testlazy() {
+    private static void testlazy() {
         System.out.println("===================================");
         Calendar cal = Calendar.getInstance();
         cal.set(2017, 7, 31);
