@@ -4,8 +4,14 @@
  * DateFormat是抽象方法，用内置的实例化方法一般返回SimpleDateFormat：
  * getInstance():
  * getDateInstance():
+ * getDateInstance(int style):
+ * getDateInstance(int style, Locale aLocale):
  * getTimeInstance():
+ * getDateTimeInstance(int dateStyle, int timeStyle)
+ * getDateTimeInstance(int dateStyle, int timeStyle, Locale aLocale)
  * getDateTimeInstance():
+ * getTimeInstance(int style)
+ * getTimeInstance(int style, Locale aLocale)
  * 方法：
  * Object clone():
  * boolean equals(Object obj):
