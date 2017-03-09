@@ -22,13 +22,13 @@
  * k 时 在一天中（1~24）
  * K 时 在上午或下午（0~11）
  * z 时区
- *
+ * <p>
  * 构造函数：
  * SimpleDateFormat():
  * SimpleDateFormat(String pattern):
  * SimpleDateFormat(String pattern,DateFormatSymbols formatSymbols):
  * SimpleDateFormat(String pattern,Locale locale):
- *
+ * <p>
  * 函数：
  * void applyLocalizedPattern(String pattern):将给定的本地化模式字符串应用到该日期格式
  * void applyPattern(String pattern):将给定的模式字符串应用到该日期格式
@@ -44,6 +44,7 @@
  * void setDateFormatSymbols(DateFormatSymbols newFormatSymbols)
  * String toLocalizedPattern():
  * String toPattern():
+ *
  * @author ccj
  * @version 1.0
  */
