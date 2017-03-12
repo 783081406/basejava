@@ -10,6 +10,7 @@ package com.ccjjltx.objectoriented.polymorphic;
 public class SubClass extends BaseClass {
     public int bookPrice = 147;
     public String bookName = "book_sub";
+    public int newField=11;
 
     @Override
     public void test() {
@@ -33,6 +34,7 @@ public class SubClass extends BaseClass {
         bc.test();//子类覆盖父类的方法
         //因为编译时类型是BaseClass而BaseClass没有提供sub()方法，所以下面代码编译时会出现错误
         //bc.sub();
-
+        //无法访问到父类没有的成员变量
+       //System.out.println(bc.newField);
     }
 }
