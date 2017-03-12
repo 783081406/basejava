@@ -21,6 +21,11 @@ public class TransterTest {
         swap(dw);
         //交换结束后，a成员变量的值是9:b成员变量的值是6
         System.out.println("交换结束后，a成员变量的值是" + dw.a + ":b成员变量的值是" + dw.b);
+        //交换dw里面的值
+        //交换结束后，a成员变量的值是9:b成员变量的值是6
+        //发现还是没有改变，所以传的依旧是副本
+        swap(dw.a,dw.b);
+        System.out.println("交换结束后，a成员变量的值是" + dw.a + ":b成员变量的值是" + dw.b);
     }
 
     /**
