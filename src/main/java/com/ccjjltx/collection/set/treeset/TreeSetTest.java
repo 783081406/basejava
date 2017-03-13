@@ -15,7 +15,9 @@ import java.util.TreeSet;
  * 且实现compareTo(Object obj)方法没有进行强制类型转换，但当试图去除TreeSet里面的集合元素时，不同类型的元素依然会发生ClassCastException
  * <p>
  * 如果两个对象通过compareTo(Object obj)方法比较相等，新对象无法添加到TreeSet集合中
- *
+ * <P>
+ *     此线程不同步
+ * </P>
  * @author ccj
  * @version 1.0
  */
@@ -53,11 +55,11 @@ public class TreeSetTest {
         //输出集合里的最后一个元素
         System.out.println(nums.last());
         //返回小于4的子集,不包含4
-        System.out.println(nums.headSet(4));
+        System.out.println(nums.headSet(4));//[-9, 2]
         //返回大于5的子集，如果Set中包含5，子集中还包含5
-        System.out.println(nums.tailSet(5));
+        System.out.println(nums.tailSet(5));//[5, 10]
         //返回大于等于-3,小于4的子集
-        System.out.println(nums.subSet(-3, 4));
+        System.out.println(nums.subSet(-3, 4));//[2]
     }
 
     /**
