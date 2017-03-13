@@ -7,8 +7,8 @@ package com.ccjjltx.comparable;
  * @version 1.0
  */
 public class Person implements Comparable<Person> {
-    int age;
-    String name;
+    private int age;
+    private String name;
 
     public Person(String name, int age) {
         this.name = name;
@@ -40,8 +40,8 @@ public class Person implements Comparable<Person> {
     public boolean equals(Person person) {
         if (this == person)
             return true;
-        if (person != null) {
-            return (this.name.equals(person.name)) && (this.age == this.age);
+        if (person != null && person.getClass() == Person.class) {
+            return (this.getName().equals(person.getName())) && (this.getAge() == this.getAge());
         }
         return false;
     }
