@@ -24,6 +24,7 @@ public class BigDecimalTest {
      * 基本加减乘除
      */
     private static void test1() {
+        System.out.println("====================================================================================");
         BigDecimal f1 = new BigDecimal("0.05");
         BigDecimal f2 = BigDecimal.valueOf(0.01);
         BigDecimal f3 = new BigDecimal(0.05);
@@ -43,13 +44,14 @@ public class BigDecimalTest {
      * 误区
      */
     private static void test2() {
+        System.out.println("====================================================================================");
         BigDecimal a = new BigDecimal("1.22");
-        System.out.println("construct with a String value: " + a);
+        System.out.println("construct with a String value: " + a);//1.22
         BigDecimal b = new BigDecimal("2.22");
         BigDecimal c = a.add(b);
         //因为是不可变（immutable）类，所以每一步运算都会产生一个新的对象
-        System.out.println("a plus b is : " + a);
-        System.out.println(c);
+        System.out.println("a plus b is : " + a);//1.22
+        System.out.println(c);//3.44
 
     }
 
@@ -57,6 +59,7 @@ public class BigDecimalTest {
      * equals()
      */
     private static void testEquals() {
+        System.out.println("====================================================================================");
         //标度需相同
         System.out.println(new BigDecimal("0.0").equals(new BigDecimal("0.00")));//false
         System.out.println(new BigDecimal("0.0").hashCode() == (new BigDecimal("0.00")).hashCode());//false
@@ -68,6 +71,7 @@ public class BigDecimalTest {
      * 所以强烈推荐使用重载方法divide(BigDecimal d, int scale, int roundMode)指定标度和舍入模式来避免以上异常。
      */
     private static void testDivide() {
+        System.out.println("====================================================================================");
         try {
             System.out.println(BigDecimal.valueOf(1).divide(BigDecimal.valueOf(3)));
         } catch (ArithmeticException e) {
@@ -82,6 +86,7 @@ public class BigDecimalTest {
      * scale指的是你小数点后的位数
      */
     private static void testSetScale() {
+        System.out.println("====================================================================================");
         //直接删除多余的小数位，如2.35会变成2.3
         System.out.println(BigDecimal.valueOf(2.35).setScale(1, BigDecimal.ROUND_DOWN));
         //进位处理，2.35变成2.4
@@ -96,6 +101,7 @@ public class BigDecimalTest {
      * XXXValue()
      */
     private static void testXxxValue() {
+        System.out.println("====================================================================================");
         double d = BigDecimal.valueOf(2.33).doubleValue();
         float f = new BigDecimal(123.123f).floatValue();
         int i = new BigDecimal(11).intValue();
@@ -107,13 +113,14 @@ public class BigDecimalTest {
      * other api
      */
     private static void testOther() {
-        System.out.println("-1绝对值:" + new BigDecimal("-1").abs());
+        System.out.println("====================================================================================");
+        System.out.println("-1绝对值:" + new BigDecimal("-1").abs());//1
         //返回此 BigDecimal 和 val 的最大值
-        System.out.println("max:" + new BigDecimal("45").max(new BigDecimal("54")));
+        System.out.println("max:" + new BigDecimal("45").max(new BigDecimal("54")));//54,依旧返回一个新BigDecimal
         //返回此 BigDecimal 和 val 的最小值
         System.out.println("min:" + new BigDecimal("45").min(new BigDecimal("54")));
         //返回一个 BigDecimal，它等效于将该值的小数点向左移动 n 位
-        System.out.println("movePointLeft(3):" + new BigDecimal("123123").movePointLeft(3));
+        System.out.println("movePointLeft(3):" + new BigDecimal("123123").movePointLeft(3));//123.123
         //返回一个 BigDecimal，它等效于将该值的小数点向右移动 n 位
         System.out.println("movePointRight(3):" + new BigDecimal("123.123").movePointRight(3));
         //多少次幂
