@@ -7,7 +7,10 @@
  * 如果使用自定义类作为TreeMap的key，且想让TreeMap良好地工作，则重写该类的equals()方法和compareTo()方法时应该保持一致的返回
  * 结果；两个key通过equals()方法比较返回true时，他们通过compareTo()方法比较应该返回0。如果equals()方法与compareTo()方法返回的结果不一致，
  * TreeMap与Map接口的规则就会冲突
- *
+ * <p>
+ * 强调:Set和Map的关系十分密切,Java源码就是先实现了HashMap,TreeMap等集合，然后通过包装一个所有的value为null的Map集合实现了Set集合类
+ * </p>
+ * 
  * @author ccj
  * @version 1.0
  */
