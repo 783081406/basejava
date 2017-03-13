@@ -12,7 +12,10 @@ import java.util.*;
 public class CollectionTest {
     public static void main(String[] args) {
         allAPIs();
-        foreachMethod();
+        foreachMethod1();
+        foreachMethod2();
+        foreachMethod3();
+        foreachMethod4();
     }
 
     /**
@@ -47,7 +50,8 @@ public class CollectionTest {
     /**
      * 遍历
      */
-    private static void foreachMethod() {
+    private static void foreachMethod1() {
+        System.out.println("================================================================================");
         //创建一个集合
         Collection<String> books = new HashSet<>();
         //增加元素
@@ -65,10 +69,21 @@ public class CollectionTest {
         */
         //调用forEach()方法遍历集合
         books.forEach(obj -> System.out.println("迭代集合元素:" + obj));
+    }
+
+    private static void foreachMethod2() {
+        System.out.println("================================================================================");
+        //创建一个集合
+        Collection<String> books = new HashSet<>();
+        //增加元素
+        books.add("书1");
+        books.add("书2");
+        books.add("书3");
+        books.add("书4");
         //===================使用Iterator===================
         /*
         Iterator定义了4个方法
-        boolean hasNext():如果被迭代的集合元素还没有被便利完，则返回true
+        boolean hasNext():如果被迭代的集合元素还没有被遍历完，则返回true
         Object next():返回集合里的下一个元素
         void remove():删除集合里面上一个next方法返回的元素
         void forEachRemaining(Consumer action):这是java8为Iterator新增加的默认方法，该方法可以使用Lambda表达式遍历集合元素
@@ -88,15 +103,36 @@ public class CollectionTest {
             //book="测试字符串";
         }
         System.out.println(books);
+    }
+
+    private static void foreachMethod3() {
+        System.out.println("================================================================================");
+        //创建一个集合
+        Collection<String> books = new HashSet<>();
+        //增加元素
+        books.add("书1");
+        books.add("书2");
+        books.add("书3");
+        books.add("书4");
+        Iterator<String> it = books.iterator();
         //===================使用Lambda表达式遍历Iterator===================
         /*
         java8为Iterator新增一个forEachRemaining(Consumer action)方法
          */
         it.forEachRemaining(obj -> System.out.println("迭代元素:" + obj));
+    }
+
+    private static void foreachMethod4() {
+        System.out.println("================================================================================");
+        //创建一个集合
+        Collection<String> books = new HashSet<>();
+        //增加元素
+        books.add("书1");
+        books.add("书2");
+        books.add("书3");
+        books.add("书4");
         //===================使用foreach遍历===================
-        for (String string : books) {
-            //此处的book变量不是集合元素本身
-            String book = string;
+        for (String book : books) {
             System.out.println(book);
             if (book.equals(("书2"))) {
                 //下面代码回引发ConcurrentModificationException异常
