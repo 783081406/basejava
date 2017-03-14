@@ -10,6 +10,22 @@
  * void swap(List list,int i,int j);将指定List集合中的i处元素和j处元素进行交换
  * void rotate(List list,int distance):但distance为正数时，将list集合的后distance个元素"整体"移到前面；当distance为负数时，
  * 将list集合的前distance个元素"整体"移到后面。该方法不会改变集合的长度
+ *
+ * Collections提供的用于查找、替换集合元素的类方法：
+ * int binarySearch(List list,Object key):使用二分搜索法指定的List集合，以获得指定对象在List集合中的索引。如果要使用该方法可以
+ * 正常工作，则必须保证List中元素已经处于有序状态。
+ * Object max(Collection coll):根据元素的自然顺序，返回给定集合中的最大元素
+ * Object max(Collection coll,Comparator comp):根据Comparator指定的顺序，返回给定集合中的最大元素
+ * Object min(Collection coll):根据元素的自然排序，返回给定集合中的最小元素
+ * Object min(Collection coll,Comparator comp):根据Comparator指定的顺序，返回给定集合中的最小元素
+ * void fill(List list,Object obj):使用指定元素obj替换指定List集合中的所有元素
+ * int frequency(Collection c,Object 0):返回指定集合中指定元素的出现次数
+ * int indexOfSubList(List source,List target):返回子List对象在父List对象中第一次出现的位置索引：如果父List中没有出现这样的子List,返回-1
+ * int lastIndexOfSubList(List source,List target):返回子List对象在父List对象中最后一个出现的位置索引；如果父List中没有出现这样的子List，则
+ * 返回-1
+ * boolean replaceAll(List list,Object oldVal,Object newVal):使用一个新值newVal替换List对象的所有旧值oldVal.
+ *
+ *
  * @author ccj
  * @version 1.0
  */
