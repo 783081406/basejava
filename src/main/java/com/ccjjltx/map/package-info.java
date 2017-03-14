@@ -28,14 +28,14 @@
  * Object setValue(V value):设置该Entry里包含的value值，并返回新设置的value值
  * <p>
  * Java8为Map新增加的方法
- * Object compute(Object key,BiFunction remappingFunction):该方法使用热mappingFunction根据原key-value对计算一个新value。
+ * Object compute(Object key,BiFunction remappingFunction):该方法使用remappingFunction根据原key-value对计算一个新value。
  * 只要新value不为null,就使用新value覆盖原value;如果原value不为null，但新value为null，则删除原key-value对；如果原value，
  * 新value不为null，但新value为null，这删除原来key-value对；如果原value、新value同时为null，那么该方法不改变任何key-value对，直接返回null
  * Object computeIfAbsent(Object key,Function mappingFunction):如果传给该方法的key参数在Map中对应的value为null，则使用mappingFunction
  * 根据key计算一个新的结果，如果计算结果不为null，则用计算结果覆盖原有的value。如果原Map原来不包括该key，那么该方法可能会
  * 添加一组key-value对
  * Object computeIfPresent(Object key,BiFunction remappingFuntion):如果传给该方法的key参数在Map中对应的value不为null,该方法将
- * 使用remappingFunction根据原key、value计算一个新的结果，如果计算结果不为null,则使用该结果覆盖原来的value；如果计算结果为null,这删除原
+ * 使用remappingFunction根据原key、value计算一个新的结果，如果计算结果不为null,则使用该结果覆盖原来的value；如果计算结果为null,则删除原
  * key-value对
  * void forEach(BiConsumer action):该方法是java8为Map新增加的一个遍历key-value对的方法，通过该方法可以更简洁地遍历Map的key-value对
  * Object getOrDefault(Object key,V defaultValue):获取指定key对应的value。如果该key不存在，则返回defaultValue
