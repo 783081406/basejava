@@ -12,7 +12,8 @@ public class ObjectTest {
         //clone得到u1对象的副本
         User u2=u1.clone();
         //判断u1、u2是否相同
-        System.out.println(u1==u2);
+        //拷贝对象返回的是一个新对象，而不是一个引用
+        System.out.println(u1==u2);//false
         //判断两个的address是否相同
         //引用，指向同一处，所以相同
         System.out.println(u1.getAddress()==u2.getAddress());
