@@ -10,7 +10,7 @@
  * ClassCastException:
  * NumberFormatException:
  * ArithmeticException:
- *
+ * FileNotFoundException:
  *
  * 所有一场对象都包含了如下几个方法：
  * getMessage():返回该异常的详细描述字符串
