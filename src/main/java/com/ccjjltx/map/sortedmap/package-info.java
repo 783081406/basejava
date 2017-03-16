@@ -16,7 +16,7 @@
  * Map.Entry lastEntry():返回该Map中最大Key所对应的key-value对，如果该Map为空或者不存在这样的key-value对，则都返回null
  * Object lastEntry():返回该Map中最大key值，如果该Map为空或不存在这样的key，则都返回null
  * Map.Entry higherEntry(Object key):返回该Map中位于key后一位的key-value对（即大于指定key的最小key所对应的key-value对）。如果该Map为空，则返回null
- * Object higherEntry(Object key):返回该Map中位于key后一位的key值（即大于指定key的最小key值）。如果该Map为空或者不存在这样的key-value
+ * Object higherKey(Object key):返回该Map中位于key后一位的key值（即大于指定key的最小key值）。如果该Map为空或者不存在这样的key-value
  * 对，则都返回null
  * Map.Entry lowerEntry(Object key):返回该Map中位于key前一位的key-value对(即小于指定key的最大key所对应的key-value对）。如果该Map为空
  * 或不存在这样的key-value对，则都返回null
