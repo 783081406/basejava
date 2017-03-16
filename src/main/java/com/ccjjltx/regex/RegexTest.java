@@ -63,7 +63,7 @@ public class RegexTest {
     private static void testMatches() {
         System.out.println("========================================================");
         String[] mails = {"kongyeeku@163.com", "kongyeeku@gmail.com", "ligang@crazyit.org", "waw@abc,xxx"};
-        String mailRegEx = "\\w{3,20}+@\\w+\\.(com|org|cn|net|gov)";
+        String mailRegEx = "\\w{3,20}@\\w+\\.(com|org|cn|net|gov)";
         Pattern mailPattern = Pattern.compile(mailRegEx);
         Matcher matcher = null;
         for (String mail : mails) {
