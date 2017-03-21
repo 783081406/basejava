@@ -11,6 +11,10 @@ public enum Gender1 {
     MALE, FEMALE;
     private String name;
 
+    public String getName() {
+        return this.name;
+    }
+
     public void setName(String name) {
         switch (this) {
             case MALE:
