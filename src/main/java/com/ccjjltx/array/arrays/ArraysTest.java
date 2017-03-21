@@ -19,15 +19,17 @@ public class ArraysTest {
         newmethos();
         //asList(Object... a)
         testAsList();
+        //使用lambda表达式
+        lambda();
     }
 
     /**
      * asList(Object... a)方法，返回一个Arrays的内部类Arrays.ArrayList，固定长度的List集合，程序
      * 只能遍历访问该集合里面的元素，不可增加、删除该集合里面的元素
      */
-    private static void testAsList(){
+    private static void testAsList() {
         System.out.println("==========================================");
-        List fixedList=Arrays.asList("book1","book2","book3");
+        List fixedList = Arrays.asList("book1", "book2", "book3");
         System.out.println(fixedList.getClass());//class java.util.Arrays$ArrayList
         //使用方法引用遍历集合元素
         fixedList.forEach(System.out::println);
@@ -84,5 +86,26 @@ public class ArraysTest {
             }
         });
         System.out.println(Arrays.toString(arr3));//[0, 5, 10, 15, 20]
+    }
+
+    private static void lambda() {
+        System.out.println("=============================================");
+        String[] arr1 = new String[]{"java", "fkava", "fkit", "ios", "android"};
+        Arrays.parallelSort(arr1, (o1, o2) -> o1.length() - o2.length());
+        //[ios, java, fkit, fkava, android]
+        System.out.println(Arrays.toString(arr1));
+        int[] arr2 = new int[]{3, -4, 25, 16, 30, 18};
+        /*
+        left代表数组中的前一个元素，计算第一个元素时，left为1
+        right代表数组中当前索引的元素
+         */
+        Arrays.parallelPrefix(arr2, (left, right) -> left * right);
+        //[3, -12, -300, -4800, -144000, -2592000]
+        System.out.println(Arrays.toString(arr2));
+        long[] arr3 = new long[5];
+        //参数是位置
+        Arrays.parallelSetAll(arr3, operand -> operand * 5);
+        //[0, 5, 10, 15, 20]
+        System.out.println(Arrays.toString(arr3));
     }
 }
