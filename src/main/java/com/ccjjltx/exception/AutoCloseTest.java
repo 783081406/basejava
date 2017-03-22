@@ -23,8 +23,6 @@ public class AutoCloseTest {
                 PrintStream ps = new PrintStream(new FileOutputStream("./src/main/java/com/ccjjltx/App.java"))) {
             //使用资源
             System.out.println(br.readLine());
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
         } catch (IOException e) {
             System.out.println(e.getMessage());
         } finally {
