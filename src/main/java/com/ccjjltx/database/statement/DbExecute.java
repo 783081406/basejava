@@ -142,6 +142,18 @@ public class DbExecute {
     }
 
     /**
+     * 关闭资源
+     */
+    public void close() {
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
      * 更改是否成功执行initConnection函数
      *
      * @param isInit 成员变量
