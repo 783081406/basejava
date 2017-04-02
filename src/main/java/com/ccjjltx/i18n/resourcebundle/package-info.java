@@ -23,4 +23,4 @@
  * @author ccj
  * @version 1.0
  */
-package com.ccjjltx.i18n;
+package com.ccjjltx.i18n.resourcebundle;

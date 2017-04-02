@@ -1,4 +1,4 @@
-package com.ccjjltx.i18n;
+package com.ccjjltx.i18n.resourcebundle;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -18,7 +18,7 @@ public class BundleTest {
         一般路径为包名字加文件头名字，同时如果找不到把文件执行copy找同一目录下
         Thread.currentThread().getContextClassLoader().getResource("").getPath()
          */
-        ResourceBundle bundle = ResourceBundle.getBundle("com/ccjjltx/i18n/test1", myLocale);
+        ResourceBundle bundle = ResourceBundle.getBundle("com/ccjjltx/i18n/resourcebundle/test1", myLocale);
         for (String key : bundle.keySet()) {
             //打印从资源文件中取得的信息
             System.out.println(key + "=" + bundle.getString(key));
