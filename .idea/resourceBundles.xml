@@ -3,5 +3,10 @@
   <component name="ResourceBundleManager">
     <file url="file://$PROJECT_DIR$/src/main/java/com/ccjjltx/i18n/resourcebundle/test1_en_US.properties" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/ccjjltx/i18n/resourcebundle/test1_zh_CN.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/src/main/java/com/ccjjltx/i18n/resourcebundle/test1_en_US.properties" />
+      <file value="file://$PROJECT_DIR$/src/main/java/com/ccjjltx/i18n/resourcebundle/test1_zh_CN.properties" />
+      <base-name>test1</base-name>
+    </custom-resource-bundle>
   </component>
 </project>
