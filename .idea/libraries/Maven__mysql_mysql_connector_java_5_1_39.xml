@@ -8,6 +8,9 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.m2/repository/MySQL/mysql-connector-Java/5.1.39/mysql-connector-java-5.1.39-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/MySQL/mysql-connector-Java/5.1.39/mysql-connector-java-5.1.39-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/MySQL/mysql-connector-Java/5.1.39/mysql-connector-java-5.1.39-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/MySQL/mysql-connector-Java/5.1.39/mysql-connector-java-5.1.39-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
