@@ -8,6 +8,14 @@ import java.util.ListResourceBundle;
  * 使用类文件来代替资源文件必须满足如下条件：
  * 该类的类名必须是baseName_language_country,与属性文件命名相似
  * 该类必须继承ListResourceBundle，并且重写getContents()方法，该方法返回Object数组，该数组的每一项都是key-value对
+ * <p>
+ * ResourceBundle搜索资源文件的顺序是：
+ * XXX_zh_CN.class
+ * XXX_zh_CN.preperties
+ * XXX_zh.class
+ * XXX_zh.properties
+ * XXX.class
+ * XXX.properties
  *
  * @author ccj
  * @version 1.0
