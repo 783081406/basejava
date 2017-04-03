@@ -1,6 +1,6 @@
 /**
  * Created by ccjjltx on 2017/3/9.
- * 该类用于获取指定失去的当前日期时间。该类可以取代System.currentTimeMillis()和TimeZone.getDefault()方法
+ * 该类用于获取指定时区的当前日期时间。该类可以取代System.currentTimeMillis()和TimeZone.getDefault()方法
  * 而且提供了更多方法来获取当前日期、时间。该类提供了大量静态方法来获取Clock对象
  * public abstract class Clock extends Object
  * protected Clock():由之类重写的构造函数
