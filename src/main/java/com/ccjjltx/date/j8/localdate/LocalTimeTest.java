@@ -1,4 +1,4 @@
-package com.ccjjltx.date.j8.LocalDate;
+package com.ccjjltx.date.j8.localdate;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
