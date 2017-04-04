@@ -1,8 +1,10 @@
 package com.ccjjltx.date.j8.localtime;
 
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.time.temporal.ChronoUnit;
 import java.util.Locale;
 
 /**
@@ -22,5 +24,17 @@ public class LocalTimeTest {
         DateTimeFormatter germanFormatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT).withLocale(Locale.GERMAN);
         LocalTime leetTime = LocalTime.parse("13:37", germanFormatter);
         System.out.println(leetTime);   // 13:37
+        ////////
+        ZoneId zone1 = ZoneId.of("Europe/Berlin");//ZoneRules[currentStandardOffset=+01:00]
+        ZoneId zone2 = ZoneId.of("Brazil/East");//ZoneRules[currentStandardOffset=-03:00]
+        System.out.println(zone1.getRules());
+        System.out.println(zone2.getRules());
+        LocalTime now1 = LocalTime.now(zone1);
+        LocalTime now2 = LocalTime.now(zone2);
+        System.out.println(now1.isBefore(now2));//false
+        long hoursBetween = ChronoUnit.HOURS.between(now1, now2);
+        long minutesBetween = ChronoUnit.MINUTES.between(now1, now2);
+        System.out.println(hoursBetween);//-4
+        System.out.println(minutesBetween);//-299
     }
 }
