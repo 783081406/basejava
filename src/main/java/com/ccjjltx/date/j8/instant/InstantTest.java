@@ -1,6 +1,7 @@
 package com.ccjjltx.date.j8.instant;
 
 import java.time.Clock;
+import java.time.Duration;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.util.Date;
@@ -28,5 +29,19 @@ public class InstantTest {
         Date date = Date.from(instant);
         System.out.println(instant);//2017-04-03T12:53:31.347Z
         System.out.println(date);//Mon Apr 03 20:53:31 CST 2017
+        Instant start = Instant.now();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Instant end = Instant.now();
+        Duration duration = Duration.between(start, end);
+        long seconds = duration.getSeconds();
+        long millis = duration.toMillis();
+        boolean isAfter = end.isAfter(start);
+        System.out.println(seconds);//3
+        System.out.println(millis);//3008
+        System.out.println(isAfter);//true
     }
 }
