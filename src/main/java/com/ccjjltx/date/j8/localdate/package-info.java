@@ -6,7 +6,7 @@
  * 不可变类型
  * now()根据当前时间戳创建LocalDate
  * of()根据制定的年月日创建LocalDate
- * parse(charqueue, DateTimeFormatter)根据传入的format将字符串转化为LocalDate对象
+ * parse(charqueue, DateTimeFormatterTest)根据传入的format将字符串转化为LocalDate对象
  * ofYearDay()根据指定的年和一年中的第几天创建LocalDate
  * getXXX()获取当前LocalDate中关于日期的信息，年月日等等
  * plusXXX()在当前的LocalDate的基础上增加指定时间类型来创建一个新的LocalDate
