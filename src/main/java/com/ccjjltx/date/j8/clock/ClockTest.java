@@ -21,10 +21,10 @@ public class ClockTest {
     private static void test1() {
         Clock clock = Clock.systemDefaultZone();
         long millis = clock.millis();
+        System.out.println(millis);//1491217621491
         Instant instant = clock.instant();
         System.out.println(clock);//SystemClock[Asia/Shanghai]
         Date date = Date.from(instant);
-        System.out.println(millis);//1491217621491
         System.out.println(date);//Mon Apr 03 19:07:01 CST 2017
         Date date1 = new Date(millis);
         System.out.println(date1);//Mon Apr 03 19:07:01 CST 2017
@@ -36,6 +36,7 @@ public class ClockTest {
         Clock c1 = Clock.systemUTC();//系统默认UTC时钟（当前瞬时时间 System.currentTimeMillis()）
         System.out.println(c1.millis());//1491305703268
         Clock c2 = Clock.systemDefaultZone(); //系统默认时区时钟（当前瞬时时间）
+        System.out.println(c2.millis());
         Clock c31 = Clock.system(ZoneId.of("Europe/Paris")); //巴黎时区
         System.out.println(c31.millis()); //每次调用将返回当前瞬时时间（UTC）//1491305703268
         Clock c32 = Clock.system(ZoneId.of("Asia/Shanghai"));//上海时区
