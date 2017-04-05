@@ -1,11 +1,12 @@
 /**
  * Created by ccjjltx on 2017/4/3.
+ * public final class Duration extends Object implements TemporalAmount, Comparable<Duration>, Serializable
  * 该类表示持续的时间，可以非常方便地获取一段时间
  * 秒和纳秒位基准的时长；Period表示以年，月，日衡量的时长。他们可以作为参数，传给主要的时间/日期类的增加或减少的方法
  * 也可以计算两个时间点之间的间隔
  * ofXXX()根据参数指定的大小计算以XXX个单位的时间间隔
  * between(arg1, arg2)计算两个参数时间点的时间间隔
- * plusXXX()/minuxXXX()在当前时间间隔的基础上加上或减去指定个单位的时间
+ * plusXXX()/minusXXX()在当前时间间隔的基础上加上或减去指定个单位的时间
  * toXXX()将时间间隔格式化位指定单位的时间，Duration一般使用该类型函数，Period一般使用getXXX()
  * abs()求时间间隔的绝对值，保证时间间隔不为负数
  * isZero()/isNegative()判断时间间隔是否为0或负
