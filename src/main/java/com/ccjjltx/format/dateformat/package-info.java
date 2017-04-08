@@ -33,4 +33,4 @@
  * @author ccj
  * @version 1.0
  */
-package com.ccjjltx.date.dateformat;
+package com.ccjjltx.format.dateformat;

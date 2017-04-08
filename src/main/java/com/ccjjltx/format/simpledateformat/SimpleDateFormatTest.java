@@ -1,4 +1,4 @@
-package com.ccjjltx.date.simpledateformat;
+package com.ccjjltx.format.simpledateformat;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

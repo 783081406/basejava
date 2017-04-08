@@ -1,4 +1,4 @@
-package com.ccjjltx.date.dateformat;
+package com.ccjjltx.format.dateformat;
 
 import java.text.DateFormat;
 import java.text.FieldPosition;
