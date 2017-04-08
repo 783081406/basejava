@@ -9,4 +9,4 @@
  * @author ccj
  * @version 1.0
  */
-package com.ccjjltx.collection.set.linkedhashset;
+package com.ccjjltx.collection.set.hashset.linkedhashset;

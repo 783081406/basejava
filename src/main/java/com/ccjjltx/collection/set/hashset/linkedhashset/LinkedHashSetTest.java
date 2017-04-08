@@ -1,4 +1,4 @@
-package com.ccjjltx.collection.set.linkedhashset;
+package com.ccjjltx.collection.set.hashset.linkedhashset;
 
 import java.util.LinkedHashSet;
 
