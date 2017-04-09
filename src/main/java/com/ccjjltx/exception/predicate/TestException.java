@@ -12,10 +12,11 @@ public class TestException {
             testException();
         } catch (MyException e) {
             e.printStackTrace();
+            System.out.println("执行了异常");
         }
     }
 
-    private static void testException() throws MyException{
+    private static void testException() throws MyException {
         throw new MyException("MyException");
     }
 }
