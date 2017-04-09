@@ -13,8 +13,5 @@ public class MyRuntimeException extends RuntimeException {
     public MyRuntimeException(String str) {
         super(str);
     }
-
-    public MyRuntimeException(Throwable t) {
-        super(t);
-    }
+    
 }
