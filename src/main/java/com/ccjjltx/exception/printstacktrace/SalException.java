@@ -1,4 +1,4 @@
-package com.ccjjltx.exception;
+package com.ccjjltx.exception.printstacktrace;
 
 /**
  * Created by ccjjltx on 2017/4/9.
@@ -7,7 +7,7 @@ package com.ccjjltx.exception;
  * @author ccj
  * @version 1.0
  */
-public class SalException extends Exception {
+public class SalException extends RuntimeException {
     public SalException() {
     }
 

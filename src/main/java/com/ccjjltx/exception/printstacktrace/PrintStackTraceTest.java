@@ -20,7 +20,7 @@ public class PrintStackTraceTest {
     }
 
     private static void thirdMethod() {
-        throw new SelfException("自定义异常信息");
+        throw new SalException("自定义异常信息");
     }
 
     /*
