@@ -6,7 +6,7 @@ package com.ccjjltx.exception.predicate;
  * @author ccj
  * @version 1.0
  */
-public class TestMyException {
+public class TestMyRuntimeException {
     public static void main(String[] args) {
         try {
             testMyRuntimeException();
