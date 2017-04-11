@@ -19,7 +19,7 @@ public class DbExecute {
     private String url;
     private String user;
     private String pass;
-    private String path = "src/java/com/ccjjltx/database/statement/connectconf.init";
+    private String path = "src/java/com/ccjjltx/database/statement/connectconf.ini";
     private boolean isInit = false;//记录是否准确的执行了iniConnection函数
     private Connection conn = null;
 
