@@ -39,10 +39,21 @@
  * 性能更好。
  * void setXxx(int parameteIndex,Xxx value):该方法根据传入参数值的类型不同，需要使用不同的方法。传入值根据索引传给SQL语句中指定
  * 位置的参数。
- *
- *
+ * <p>
+ * <p>
  * public interface ResultSet extends Wrapper,AutoCloseable;
- *
+ * 结果集对象。通过列索引或列名获得列数据。
+ * void close():释放ResultSet对象
+ * boolean absolute(int row):将结果集的记录指针移动到第row行，如果row是负数，则移动到倒数第row行。如果移动后的记录指针指向一条
+ * 有效记录，则返回true。
+ * void beforeFirst():将ResultSet的记录指针定位到首行之前。这是ResultSet结果集记录指针的初始状态——记录指针的其实位置于第一行之前
+ * boolean first():将ResultSet的记录指针定位到首行。如果移动后的记录指针指向一条有效记录，则该方法返回true。
+ * boolean previous():将ResultSet的记录指针定位到上一行。如果移动后的记录指针指向一条有效记录，则该方法返回true。
+ * boolean next():将ResultSet的记录指针定位到下一行，如果移动后的记录指针指向一条有效记录，则该方法返回true。
+ * boolean last():将ResultSet的记录指针定位到最后一行，如果移动后的记录指针指向一条有效记录，则该方法返回true。
+ * void afterLast():将ResultSet的记录指针定位到最后一行之后。
+ * java7新增：
+ * <T> T getObject(int columnIndex,Class<T> type)和<T> T getObject(String columnIndex,Class<T> type)
  *
  * @author ccj
  * @version 1.0
