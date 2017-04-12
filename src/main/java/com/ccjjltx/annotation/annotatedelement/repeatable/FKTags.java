@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Created by ccjjltx on 2017/4/12.
  * 作为FKTag的容器
+ * "容器"注解的保留期必须比它所包含的注解的保留期更长,否则编译会报错
  *
  * @author ccj
  * @version 1.0
