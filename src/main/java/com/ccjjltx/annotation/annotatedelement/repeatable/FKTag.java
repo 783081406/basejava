@@ -1,9 +1,6 @@
 package com.ccjjltx.annotation.annotatedelement.repeatable;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * Created by ccjjltx on 2017/4/12.
@@ -15,7 +12,8 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface FKTag {
+@Repeatable( FKTags.class)
+@interface FKTag {
     String name() default "ccj";
 
     int age();
