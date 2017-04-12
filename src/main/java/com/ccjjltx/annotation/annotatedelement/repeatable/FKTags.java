@@ -17,5 +17,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface FKTags {
     //定义value成员变量，该成员变量可以接受多个@FkTag注解
-    FKTag value();
+    FKTag[] value();
 }
