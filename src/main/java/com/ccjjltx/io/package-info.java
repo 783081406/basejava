@@ -30,6 +30,8 @@
  * Writer（因为字符流直接以字符作为操作单位，所以Writer可以用字符串来代替字符数组，即以String对象作为参数）
  * void writer(String str):将str字符串里包含的字符输入到指定输入流中
  * void writer(String str,int off,int len):将str字符串里从off位置开始，长度为len的字符串输出到制定输入流中
+ * void writer(char[] cbuf):
+ * void writer(char cbuf,int off,int len):
  *
  * @author ccj
  * @version 1.0
