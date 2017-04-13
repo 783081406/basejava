@@ -11,6 +11,11 @@ import java.io.IOException;
  */
 public class FileTest {
     public static void main(String[] args) throws IOException {
+        test1();
+        test2();
+    }
+
+    private static void test1() throws IOException {
         //以当前路径来创建一个File对象
         File file = new File(".");
         //直接过去文件名，输出一个点
@@ -62,6 +67,24 @@ public class FileTest {
         E:\
         F:\
         G:\
+         */
+    }
+
+    private static void test2() {
+        System.out.println("=======================================");
+        File file = new File(".");
+        //FilenameFilter函数式接口，boolean accept(File dir,String name)
+        //实现文件过滤器
+        //如果文件名以.java结尾，或文件对应一个路径，则返回true
+        String[] nameList = file.list((dir, name) -> name.endsWith(".java") || new File(name).isDirectory());
+        for (String name : nameList) {
+            System.out.println(name);
+        }
+        /*
+        .git
+        .idea
+        src
+        target
          */
     }
 }
