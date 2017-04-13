@@ -25,7 +25,7 @@
  * long length():返回文件内容的长度
  * <p>
  * 文件操作相关的方法
- * boolean createNewFile():当此File对象所对应的文件不存在时，该方法将新建艺哥该File对象所指定的新文件，如果创建成功则返回true，否返回false;
+ * boolean createNewFile():当此File对象所对应的文件不存在时，该方法将新建一个该File对象所指定的新文件，如果创建成功则返回true，否返回false;
  * boolean delete():删除File对象所对应的文件或路径
  * static File createTempFile(String prefix,String suffix):在默认的临时文件目录中创建一个临时的空文件，使用给定前缀，系统
  * 生成的随机数和给定后缀作为文件名。这是一个静态方法，可以直接通过File类来调用。prefix参数必须至少是3字节长，建议前缀使用一个短的、
