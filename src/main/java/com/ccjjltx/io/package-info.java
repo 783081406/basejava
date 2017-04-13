@@ -15,6 +15,21 @@
  * int read(char[] cbuf):从输入流中最多读取cbuf.length个字符的数据，并将其存储的字符数组cbuf中返回实际读取的字符数
  * int read(char[] cbuf,int off,int len):从输入流中最多读取len个字符的数据，并将其存储在支付数组cbuf中，放入数组cbuf中时，并不是
  * 从数组起点开始，而是从off位置开始，返回实际读取的字符数
+ * <p>
+ * InputStream和Reader支持移动记录指针：
+ * void mark(int readAheadLimit):在记录指针当前位置记录一个标记（mark）
+ * boolean markSupported():判断此输入流是否
+ * void reset():将此流的记录指针重新定位到上一次记录标记(mark)的位置
+ * long skip(long n):记录指针向前移动n个字节/字符
+ * <p>
+ * OutputStream
+ * void write(int c):将指定的字节/字符输入到输入流中，其中c既可以代表字节，也可以代表字符
+ * void write(byte[]/char[] buf):将字节数组/字符数组中的数据输出到指定输出流中
+ * void write(byte[]/char[] buf,int off,int len):将字节数组/字符数组中从off位置开始，长度为len的字节/字符输出到输出流中
+ * <p>
+ * Writer（因为字符流直接以字符作为操作单位，所以Writer可以用字符串来代替字符数组，即以String对象作为参数）
+ * void writer(String str):将str字符串里包含的字符输入到指定输入流中
+ * void writer(String str,int off,int len):将str字符串里从off位置开始，长度为len的字符串输出到制定输入流中
  *
  * @author ccj
  * @version 1.0
