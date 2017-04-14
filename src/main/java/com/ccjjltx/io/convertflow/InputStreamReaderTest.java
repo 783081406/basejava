@@ -1,4 +1,4 @@
-package com.ccjjltx.io.inputstreamreader;
+package com.ccjjltx.io.convertflow;
 
 import java.io.BufferedReader;
 import java.io.IOException;
