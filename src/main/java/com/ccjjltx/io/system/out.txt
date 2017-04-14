@@ -1,0 +1,2 @@
+普通字符串
+com.ccjjltx.io.system.RedirctOut@74a14482
