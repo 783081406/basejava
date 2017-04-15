@@ -16,6 +16,10 @@
  * <p>
  * 当序列化流不完整时，readObjectNoData()方法可以用来正确地初始化反序列的对象。例如，接收方使用的反序列化类的版本不同于发送方，或者接收方版本扩展的类不同发送方版本扩展的类，
  * 或者序列化流被篡改时，系统都会调用readObjectNoData()方法来初始化反序列的对象
+ * <p>
+ * 还有一种更加彻底的自定义机制，它甚至可以在序列化对象时将该对象替换成其他对象。如果需要实现序列化某个对象时替换该对象，则应为序列化类提供特殊方法：
+ * ANY-ACCESS-MODIFIER     Object   writeReplace()   throws    ObjectStreamException;
+ * 此writeReplace()方法将由序列化机制调用，只要该方法存在。因为该方法可以拥有是有(private)、受保护的(protected)和包是有(package-private)等访问权限，所以在其子类有可能获得该方法.
  *
  * @author ccj
  * @version 1.0
