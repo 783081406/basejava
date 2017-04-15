@@ -21,7 +21,7 @@ public class ReadFromProcess {
         ) {
             String buff = null;
             while ((buff = bufferedReader.readLine()) != null) {
-                System.out.println(buff);
+                System.out.println(new String(buff.getBytes("UTF-8")));
             }
         }
     }
