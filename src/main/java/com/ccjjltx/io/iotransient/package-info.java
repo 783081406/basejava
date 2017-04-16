@@ -20,6 +20,15 @@
  * 还有一种更加彻底的自定义机制，它甚至可以在序列化对象时将该对象替换成其他对象。如果需要实现序列化某个对象时替换该对象，则应为序列化类提供特殊方法：
  * ANY-ACCESS-MODIFIER     Object   writeReplace()   throws    ObjectStreamException;
  * 此writeReplace()方法将由序列化机制调用，只要该方法存在。因为该方法可以拥有是有(private)、受保护的(protected)和包是有(package-private)等访问权限，所以在其子类有可能获得该方法.
+ * <p>
+ * 系统在调用某个对象之前该对象的writeReplace()和writeObject()两种方法，系统总是先调用被序列化对象的writeReplace()方法，如果该方法返回另一个对象，系统将会调用另一个对象的writeReplace()方法……直到该方法不在返回另一个对象为止，程序最后将调用该对象的writeObject()方法来保存该对象的状态。
+ * 与writeReplace()方法相对的是，序列化机制里面还有一种特殊的方法，它可以实现保护性复制整个对象。这个方法就是：
+ * ANY-ACCESS-MODIFIER    Object    readResolve()   throws    ObjectStreamException;
+ * 这个方法会紧接着readObject()之后被调用，该方法的返回值将会代替原来序列化的对象，而原来readObject()反序列化的对象将会被立即丢弃
+ * <p>
+ * 注意：
+ * 与writeReplace()方法类似的是，readResolve()方法也可以使用任意的访问控制符，因此父类的readResolve()方法可能被其子类继承。这样利用readResolve()方法时就会存在一个明显的缺点，就是当父类已经实现了readResolve()方法后，子类将变得无从下手。如果父类包含一个protected或public的readResolve()方法，而且子类也没有重写该方法，将会使得子类反序列化时得到一个父类的对象——这显然不是程序要的结果，而且也不容易发现这种错误。总是让子类重写readResolve()方法无疑是一个负担，因此对于要作为父类继承的类而言，实现readResolve()方法可能有一些潜在的危险
+ * 通常的建议是，对于final类重写readResolve()方法不会有任何问题；否则重写readResolve()方法时应尽量使用private修饰该方法。
  *
  * @author ccj
  * @version 1.0
