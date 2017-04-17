@@ -1,4 +1,4 @@
-package com.ccjjltx.io.nio;
+package com.ccjjltx.io.nio.buffer;
 
 import java.nio.CharBuffer;
 
