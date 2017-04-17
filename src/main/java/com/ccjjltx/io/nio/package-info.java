@@ -41,6 +41,9 @@
  * 分相对和绝对数据：
  * 相对(Relative):从Buffer的当前position处开始读取或写入数据，然后将位置(position)的值按照处理元素的个数增加
  * 绝对(Absolute):直接根据索引想Buffer中读取或写入数据，使用绝对方式访问Buffer里的数据时，并不会影响位置(position)的值
+ * <p>
+ * 普通Buffer:创建成本低，不适用于短生存期、一次用完就丢弃的Buffer.
+ * ByteBuffer.allocateDirect():创建成本高，读取效率更高，只适用于长生存期的Buffer.
  *
  * @author ccj
  * @version 1.0
