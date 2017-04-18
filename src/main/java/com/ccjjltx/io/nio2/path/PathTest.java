@@ -1,4 +1,4 @@
-package com.ccjjltx.io.nio2.Path;
+package com.ccjjltx.io.nio2.path;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
