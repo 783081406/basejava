@@ -1,4 +1,4 @@
-package com.ccjjltx.io.nio.lock;
+package com.ccjjltx.io.nio2.Path;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
