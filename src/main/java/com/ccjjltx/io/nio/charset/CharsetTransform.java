@@ -33,10 +33,14 @@ public class CharsetTransform {
         // 将CharBuffer中的字符序列转换成字节序列
         ByteBuffer bbuff = cnEncoder.encode(cbuff);
         // 循环访问ByteBuffer中的每个字节
-        for (int i = 0; i < bbuff.capacity(); i++) {
+        for (int i = 0; i < bbuff.limit(); i++) {
             System.out.print(bbuff.get(i) + " ");
         }
         // 将ByteBuffer的数据解码成字符序列
         System.out.println("\n" + cnDecoder.decode(bbuff));
+//        bbuff.clear();
+//        while (bbuff.hasRemaining()) {
+//            System.out.print(bbuff.get() + " ");
+//        }
     }
 }
