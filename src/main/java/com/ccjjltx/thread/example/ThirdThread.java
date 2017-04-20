@@ -29,7 +29,7 @@ public class ThirdThread {
         }
         try {
             //获取线程返回值
-            System.out.println("子线程的返回值:" + task.get());
+            System.out.println("子线程的返回值:" + task.get());//子线程的返回值:100
         } catch (Exception ex) {
             ex.printStackTrace();
         }
