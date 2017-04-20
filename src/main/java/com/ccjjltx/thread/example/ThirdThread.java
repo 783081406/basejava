@@ -1,4 +1,4 @@
-package com.ccjjltx.thread;
+package com.ccjjltx.thread.example;
 
 import java.util.concurrent.FutureTask;
 

@@ -1,4 +1,4 @@
-package com.ccjjltx.thread;
+package com.ccjjltx.thread.example;
 
 /**
  * Created by ccjjltx on 2017/4/6.
