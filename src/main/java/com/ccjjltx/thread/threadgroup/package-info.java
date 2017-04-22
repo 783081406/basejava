@@ -25,6 +25,12 @@
  * setDaemon(boolean daemon):把该线程组设置成后台线程组，后台线程组有一个特征——当后台线程组的最后一个线程执行结束或最后一个线程被
  * 销毁后，后台线程将自动销毁
  * setMaxPriority(int pri):设置线程组的最高优先级。
+ * <p>
+ * 线程组处理异常的默认流程：
+ * 1.如果该线程组有父进程组，则调用父进程组的uncaughtException()方法来处理该异常
+ * 2.如果该线程实例所属的线程类有默认 的异常处理器（由setDefaultUncaughtExceptionHandler()方法设置的异常处理器），那么就调用
+ * 该异常处理器来处理该异常
+ * 3.如果该异常对象是ThreadDeath的对象，则不做任何处理；否则，将异常跟踪栈的信息打印到System.err错误输出流，并结束该线程
  *
  * @author ccj
  * @version 1.0
