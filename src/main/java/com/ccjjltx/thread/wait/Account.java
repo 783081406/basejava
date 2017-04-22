@@ -41,6 +41,7 @@ public class Account {
             //如果flag为假，表明账户中还没有人存钱进去，取钱方法阻塞
             if (!flag) {
                 wait();
+                System.out.println(1);
             } else {
                 //执行取钱操作
                 System.out.println(Thread.currentThread().getName() + "取钱:" + drawAmount);
@@ -62,6 +63,7 @@ public class Account {
             //如果flag为真，表明账户中已有人存钱进入，存钱方法阻塞
             if (flag) {
                 wait();
+                System.out.println(1);
             } else {
                 //执行存款操作
                 System.out.println(Thread.currentThread().getName() + " 存款:" + depositAmount);
